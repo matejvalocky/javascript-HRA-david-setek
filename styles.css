@@ -6,8 +6,21 @@
 
 /* ALL PAGE */
 .allPage{
-    background: linear-gradient(black, darkred);
+    background: linear-gradient(rgb(141, 0, 0), black);
     height: 100vh;
+    
    
+}
+
+/* PLAYGROUND */
+
+.playground{
+    width: 80%;
+    height: 80%;
+    background-color: darkblue;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
 }
 
