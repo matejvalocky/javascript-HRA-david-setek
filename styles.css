@@ -17,10 +17,38 @@
 .playground{
     width: 80%;
     height: 80%;
-    background-color: darkblue;
+    background-color: cadetblue;
     position: absolute;
     top: 10%;
     left: 10%;
 
 }
 
+
+
+/* TOTAL SCORE */
+
+.totalScore{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;   /* 700 = TO ISTE */
+} 
+
+
+.totalScore p:nth-of-type(2){
+    font-size: 40;
+    text-align: center;
+
+}
+
+.totalScore0 {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+
+.totalScore1{
+    position: absolute;
+    top: 15%;
+    left: 75%;
+}
