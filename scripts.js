@@ -5,3 +5,5 @@
 //60. Ovládni JavaScript - Hra v JavaScriptu: přidání celkového skóre
 
 //61. Ovládni JavaScript - Hra v JavaScriptu: přidání současného skóre
+
+//62. Ovládni JavaScript - Hra v JavaScriptu: tlačítka k ovládání hry
