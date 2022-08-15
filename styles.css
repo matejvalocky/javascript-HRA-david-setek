@@ -52,3 +52,37 @@
     top: 15%;
     left: 75%;
 }
+
+/* CURRENT SCORE */
+
+.currentScore{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+}
+
+.currentScore p{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.currentScore p:nth-child(2){
+    font-size: 40px;    
+
+}
+
+.currentScore0{
+    position: absolute;
+    top: 40%;
+    left: 11%;
+
+}
+
+.currentScore1{
+    position: absolute;
+    top: 40%;
+    right: 13.5%;
+
+}
