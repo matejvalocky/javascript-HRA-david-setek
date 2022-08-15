@@ -12,6 +12,8 @@
 
 //64. Ovládni JavaScript - Hra v JavaScriptu: vynulování hodnot a základní proměnné
 
+//65. Ovládni JavaScript - Hra v JavaScriptu: házíme kostkou pomocí náhodného čísla
+
 
 
 
@@ -43,4 +45,18 @@ var totalScore , roundScore, activePlayer, dice;  //celkove skoro a skore v ramc
 totalScore = [0,0];
 roundScore = 0;
 activePlayer = 0;
+
+
+//HODENIE KOCKOU
+
+document.querySelector(".rollDice").addEventListener("click", function(){
+    //1. generujeme náhodné číslo medzi 1 a 6
+    var dice = Math.ceil(Math.random()*6);  
+
+    //2. zobraziť správny obrázok
+    var diceElement = document.querySelector(".diceImage");
+    console.log(diceElement.src = "img/" + dice + ".jpg");
+    diceElement.style.display = "block";
+
+});
 
