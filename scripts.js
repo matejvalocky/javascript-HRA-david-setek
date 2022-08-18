@@ -14,6 +14,7 @@
 
 //65. Ovládni JavaScript - Hra v JavaScriptu: házíme kostkou pomocí náhodného čísla
 
+//66. Ovládni JavaScript - Hra v JavaScriptu: nasčítáváme čísla z kostky
 
 
 
@@ -51,12 +52,25 @@ activePlayer = 0;
 
 document.querySelector(".rollDice").addEventListener("click", function(){
     //1. generujeme náhodné číslo medzi 1 a 6
-    var dice = Math.ceil(Math.random()*6);  
+    var dice = Math.ceil(Math.random()*6);  // náhodné číslo z kocky
 
     //2. zobraziť správny obrázok
     var diceElement = document.querySelector(".diceImage");
     console.log(diceElement.src = "img/" + dice + ".jpg");
     diceElement.style.display = "block";
+
+    //3. načítanie + nasčítanie hodnotky z kocky
+    
+
+    //ak nám padne jednotka, tak celé roundScore sa nám vymaže na 0, a to zapíšeme podmiekou
+     
+    if (dice !== 1){                        // tak urob toto = načítame roundScore
+        roundScore = dice + roundScore;
+        document.getElementById("currentScore0").textContent = roundScore;
+    } else {                                // inak urob toto = vymaže sa nám roundScore = padne nám jednotka z kocky a bude hrať ďalší hráč
+
+    }
+
 
 });
 
