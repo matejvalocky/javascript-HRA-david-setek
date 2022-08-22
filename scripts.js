@@ -24,6 +24,8 @@
 
 //70. Ovládni JavaScript - Hra v JavaScriptu: funkce pro resetování hry
 
+//71. Ovládni JavaScript - Hra v JavaScriptu: máme vítěze, tak zastavíme hru
+
 
 
 
@@ -54,6 +56,7 @@ function newStart(){
     totalScore = [0,0];
     roundScore = 0;
     activePlayer = 0;
+    playGame = true;
 // vynulovanie a odstránenie kocky
     document.getElementById("totalScorePlayer-0").textContent = 0;
     document.getElementById("totalScorePlayer-1").textContent = 0;
@@ -77,7 +80,7 @@ function newStart(){
 
 //ZAKLADNE PREMENNE
 
-var totalScore , roundScore, activePlayer, dice;  //celkove skoro a skore v ramci jedného kola, aktívny hráč a hodnota kocky.
+var totalScore , roundScore, activePlayer, dice, playGame;  //celkove skoro a skore v ramci jedného kola, aktívny hráč a hodnota kocky.
 
 totalScore = [0,0];
 roundScore = 0;
@@ -89,27 +92,27 @@ activePlayer = 0;
 //HODENIE KOCKOU
 
 document.querySelector(".rollDice").addEventListener("click", function(){
-    //1. generujeme náhodné číslo medzi 1 a 6
-    var dice = Math.ceil(Math.random()*6);  // náhodné číslo z kocky
+    if(playGame){
+//1. generujeme náhodné číslo medzi 1 a 6
+var dice = Math.ceil(Math.random()*6);  // náhodné číslo z kocky
 
-    //2. zobraziť správny obrázok
-    var diceElement = document.querySelector(".diceImage");
-    console.log(diceElement.src = "img/" + dice + ".jpg");
-    diceElement.style.display = "block";
+//2. zobraziť správny obrázok
+var diceElement = document.querySelector(".diceImage");
+console.log(diceElement.src = "img/" + dice + ".jpg");
+diceElement.style.display = "block";
 
-    //3. načítanie + nasčítanie hodnotky z kocky
-    
+//3. načítanie + nasčítanie hodnotky z kocky
 
-    //ak nám padne jednotka, tak celé roundScore sa nám vymaže na 0, a to zapíšeme podmiekou
-     
+
+//ak nám padne jednotka, tak celé roundScore sa nám vymaže na 0, a to zapíšeme podmiekou
+ 
     if (dice !== 1){                        // tak urob toto = načítame roundScore
-        roundScore = dice + roundScore;
-        document.getElementById("currentScore" + activePlayer).textContent = roundScore;
-    } else {                                // inak urob toto = vymaže sa nám roundScore = padne nám jednotka z kocky a bude hrať ďalší hráč
-            nextPlayer();
+    roundScore = dice + roundScore;
+    document.getElementById("currentScore" + activePlayer).textContent = roundScore;
+}   else {                                // inak urob toto = vymaže sa nám roundScore = padne nám jednotka z kocky a bude hrať ďalší hráč
+        nextPlayer();
+        }
     }
-
-
 });
 
 
@@ -137,7 +140,8 @@ function nextPlayer(){
 /* PODRZAT SKORE */
 
 document.querySelector(".holdScore").addEventListener("click", function(){
-    //celkové skore sa vyplní súčasným skóre
+    if(playGame){ 
+        //celkové skore sa vyplní súčasným skóre
     totalScore[activePlayer] =  totalScore[activePlayer] + roundScore; 
     //
     document.querySelector("#totalScorePlayer-" + activePlayer).textContent = totalScore[activePlayer];
@@ -145,9 +149,12 @@ document.querySelector(".holdScore").addEventListener("click", function(){
     if(totalScore[activePlayer] >=20){
         document.querySelector("#name-" + activePlayer).textContent = "Víťaz";
         document.querySelector(".diceImage").style.display = "none";
+        playGame = false;
     }else{
         nextPlayer();
+        }
     }
+    
 });
 
 document.querySelector(".newGame").addEventListener("click", newStart);
