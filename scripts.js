@@ -24,7 +24,9 @@
 
 //70. Ovládni JavaScript - Hra v JavaScriptu: funkce pro resetování hry
 
+
 //71. Ovládni JavaScript - Hra v JavaScriptu: máme vítěze, tak zastavíme hru
+
 
 
 
@@ -56,7 +58,9 @@ function newStart(){
     totalScore = [0,0];
     roundScore = 0;
     activePlayer = 0;
+
     playGame = true;
+
 // vynulovanie a odstránenie kocky
     document.getElementById("totalScorePlayer-0").textContent = 0;
     document.getElementById("totalScorePlayer-1").textContent = 0;
