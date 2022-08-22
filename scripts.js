@@ -20,6 +20,8 @@
 
 //68. Ovládni JavaScript - Hra v JavaScriptu: hráči si mohou podržet své skóre
 
+//69. Ovládni JavaScript - Hra v JavaScriptu: načítání skóre i u druhého hráče
+
 
 
 
@@ -70,7 +72,7 @@ document.querySelector(".rollDice").addEventListener("click", function(){
      
     if (dice !== 1){                        // tak urob toto = načítame roundScore
         roundScore = dice + roundScore;
-        document.getElementById("currentScore0").textContent = roundScore;
+        document.getElementById("currentScore" + activePlayer).textContent = roundScore;
     } else {                                // inak urob toto = vymaže sa nám roundScore = padne nám jednotka z kocky a bude hrať ďalší hráč
             nextPlayer();
     }
@@ -110,6 +112,7 @@ document.querySelector(".holdScore").addEventListener("click", function(){
 
     if(totalScore[activePlayer] >=20){
         document.querySelector("#name-" + activePlayer).textContent = "Víťaz";
+        document.querySelector(".diceImage").style.display = "none";
     }else{
         nextPlayer();
     }
