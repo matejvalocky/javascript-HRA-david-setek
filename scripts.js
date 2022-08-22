@@ -22,6 +22,8 @@
 
 //69. Ovládni JavaScript - Hra v JavaScriptu: načítání skóre i u druhého hráče
 
+//70. Ovládni JavaScript - Hra v JavaScriptu: funkce pro resetování hry
+
 
 
 
@@ -44,6 +46,34 @@ document.getElementById("currentScore1").textContent = 0;
 //SKRYTIE KOCKY
 document.querySelector(".diceImage").style.display = "none";
 
+newStart();
+
+
+
+function newStart(){
+    totalScore = [0,0];
+    roundScore = 0;
+    activePlayer = 0;
+// vynulovanie a odstránenie kocky
+    document.getElementById("totalScorePlayer-0").textContent = 0;
+    document.getElementById("totalScorePlayer-1").textContent = 0;
+
+    document.getElementById("currentScore0").textContent = 0;
+    document.getElementById("currentScore1").textContent = 0;
+
+//skrytie kocky
+    document.querySelector(".diceImage").style.display = "none";
+//texty do pôvodného stavu
+    document.querySelector("#name-0").textContent = "Skóre 1. hráča";
+    document.querySelector("#name-1").textContent = "Skóre 2. hráča";
+
+//vrátime zvýraznenie aktívneho hráča k prvému a u druhého odstraníme
+    document.querySelector(".totalScore0").classList.add("active"); 
+    document.querySelector(".totalScore1").classList.remove("active"); 
+}
+
+
+
 
 //ZAKLADNE PREMENNE
 
@@ -52,6 +82,8 @@ var totalScore , roundScore, activePlayer, dice;  //celkove skoro a skore v ramc
 totalScore = [0,0];
 roundScore = 0;
 activePlayer = 0;
+
+
 
 
 //HODENIE KOCKOU
@@ -117,6 +149,8 @@ document.querySelector(".holdScore").addEventListener("click", function(){
         nextPlayer();
     }
 });
+
+document.querySelector(".newGame").addEventListener("click", newStart);
 
 
 
