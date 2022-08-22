@@ -18,6 +18,8 @@
 
 //67. Ovládni JavaScript - Hra v JavaScriptu: přepínání hráčů a zvýraznění aktuálního hráče
 
+//68. Ovládni JavaScript - Hra v JavaScriptu: hráči si mohou podržet své skóre
+
 
 
 
@@ -95,7 +97,23 @@ function nextPlayer(){
 
 }
 
-/* ZVYRAZNENIE AKTUALNEHO HRACA */
+/* ZVYRAZNENIE AKTUALNEHO HRACA CEZ CSS */
+
+
+/* PODRZAT SKORE */
+
+document.querySelector(".holdScore").addEventListener("click", function(){
+    //celkové skore sa vyplní súčasným skóre
+    totalScore[activePlayer] =  totalScore[activePlayer] + roundScore; 
+    //
+    document.querySelector("#totalScorePlayer-" + activePlayer).textContent = totalScore[activePlayer];
+
+    if(totalScore[activePlayer] >=20){
+        document.querySelector("#name-" + activePlayer).textContent = "Víťaz";
+    }else{
+        nextPlayer();
+    }
+});
 
 
 
