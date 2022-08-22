@@ -16,6 +16,8 @@
 
 //66. Ovládni JavaScript - Hra v JavaScriptu: nasčítáváme čísla z kostky
 
+//67. Ovládni JavaScript - Hra v JavaScriptu: přepínání hráčů a zvýraznění aktuálního hráče
+
 
 
 
@@ -68,9 +70,32 @@ document.querySelector(".rollDice").addEventListener("click", function(){
         roundScore = dice + roundScore;
         document.getElementById("currentScore0").textContent = roundScore;
     } else {                                // inak urob toto = vymaže sa nám roundScore = padne nám jednotka z kocky a bude hrať ďalší hráč
-
+            nextPlayer();
     }
 
 
 });
+
+
+/* PREPINANIE HRACOV */
+
+function nextPlayer(){
+    if(activePlayer === 0){     /* PREPINANIE HRACOV */
+        activePlayer = 1;
+    }else{
+        activePlayer = 0;
+    }
+
+    roundScore = 0;
+    document.getElementById("currentScore0").textContent = 0;  /* VYNULOVANIE SKORE*/
+    document.getElementById("currentScore1").textContent = 0;  /* VYNULOVANIE SKORE*/
+    document.querySelector(".diceImage").style.display = "none";  /* SKRYTIE KOCKY */
+    document.querySelector(".totalScore0").classList.toggle("active"); /* PREPINAC */
+    document.querySelector(".totalScore1").classList.toggle("active"); /* PREPINAC */
+
+}
+
+/* ZVYRAZNENIE AKTUALNEHO HRACA */
+
+
 

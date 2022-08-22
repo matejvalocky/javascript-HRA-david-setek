@@ -127,3 +127,14 @@
     top: 30%;
     left: 43%;
 }
+
+/* STYLOVANIE AKTIVNEHO HRACA = ACTIVE PLAYER*/
+
+.active{
+    color: black;
+    border: 2px solid green;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: yellow ;
+}
+
