@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Montserrat;
 }
 
 /* ALL PAGE */
 .allPage{
-    background: linear-gradient(rgb(141, 0, 0), black);
+    background: linear-gradient(rgb(0, 47, 255), rgb(125, 0, 136));
     height: 100vh;
     
    
@@ -21,6 +22,10 @@
     position: absolute;
     top: 10%;
     left: 10%;
+    border-radius: 1em;
+    box-shadow: 0px -1px 26px 10px rgba(0,0,0,0.33);
+    -webkit-box-shadow: 0px -1px 26px 10px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px -1px 26px 10px rgba(0,0,0,0.33);
 
 }
 
@@ -31,7 +36,9 @@
 .totalScore{
     font-size: 30px;
     color: black;
-    font-weight: bold;   /* 700 = TO ISTE */
+    font-weight: 700;   /* 700 = TO ISTE */
+    
+    
 } 
 
 
@@ -56,9 +63,11 @@
 /* CURRENT SCORE */
 
 .currentScore{
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 120px;
     background-color: blue;
+    border-radius: 1em;
+    
 }
 
 .currentScore p{
@@ -83,25 +92,33 @@
 .currentScore1{
     position: absolute;
     top: 40%;
-    right: 13.5%;
+    right: 11%;
+    /* border: 1px red solid; */
 
 }
 
 /* MIDDLE TEXT - BUTTONS */
 
 .middleText{
-    position: absolute;
-    top: 70%;
-    left: 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 25px;
     color: white;
+    position: absolute;
+    top: 70%;
+    /* border: 1px red solid; */
+    width: 100%;
+
     
     
 }
 
 
 .btn{
+    width: 200px;
     border: 2px blue solid;
     padding: 5px 10px;
     border-radius: 10px;
@@ -123,10 +140,15 @@
 /* DICE - KOCKA */
 
 .dice{
-    position: absolute;
-    top: 30%;
-    left: 43%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px red solid; */
+    height: 100%;
 }
+
+
 
 /* STYLOVANIE AKTIVNEHO HRACA = ACTIVE PLAYER*/
 
