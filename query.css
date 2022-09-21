@@ -1,0 +1,87 @@
+@media only screen and (max-width: 950px){
+    .totalScore{
+        font-size: 20px;
+        color: black;
+        font-weight: 700;   /* 700 = TO ISTE */
+        
+        
+    } 
+
+    .currentScore{
+        width: 150px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 1em;
+        
+    }
+
+    .currentScore p{
+        font-size: 15px;
+        color: white;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .currentScore p:nth-child(2){
+        font-size: 20px;    
+    
+    }
+        
+        
+    }
+
+    @media only screen and (max-width: 710px){
+        .totalScore{
+            font-size: 15px;
+            color: black;
+            font-weight: 700;   /* 700 = TO ISTE */
+            
+            
+        } 
+    
+        .currentScore{
+            width: 120px;
+            height: 70px;
+            background-color: blue;
+            border-radius: 1em;
+            
+        }
+    
+        .currentScore p{
+            font-size: 13px;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+    
+        .currentScore p:nth-child(2){
+            font-size: 20px;    
+        
+        }
+
+
+    }
+
+    @media only screen and (max-width: 600px){
+        .btn{
+            width: 150px;
+            border: 2px blue solid;
+            padding: 2px 5px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            background-color: rgb(141, 0, 0);
+            
+            
+        }
+
+        .middleText p{
+            font-size: 20px;
+        }
+
+        .dice img{
+            margin-top: 120px;
+            transform: scale(0.7);
+        }
+
+    }
+
