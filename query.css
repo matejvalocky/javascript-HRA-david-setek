@@ -85,3 +85,63 @@
 
     }
 
+    @media only screen and (max-width: 403px){
+
+        .totalScore{
+            font-size: 10px;
+            color: black;
+            font-weight: 400;   /* 700 = TO ISTE */
+            
+            
+        } 
+
+        .btn{
+            width: 120px;
+            border: 2px blue solid;
+            padding: 2px 5px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            background-color: rgb(141, 0, 0);
+            
+            
+            
+        }
+
+        .middleText{
+            margin-top: 25px;
+        }
+
+        .middleText p{
+            font-size: 15px;
+        }
+
+
+
+        .dice img{
+            margin-top: 135px;
+            transform: scale(0.5);
+        }
+
+        .currentScore{
+            width: 100px;
+            height: 70px;
+            background-color: blue;
+            border-radius: 1em;
+            
+        }
+    
+        .currentScore p{
+            font-size: 12px;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+    
+        .currentScore p:nth-child(2){
+            font-size: 20px;    
+        
+        }
+
+
+    }
+
